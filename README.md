@@ -22,6 +22,10 @@ cp .env.example .env
 ```bash
 php artisan key:generate
 ```
+-  Create a symbolic link from source directory storage/app/public to target directory public/storage:
+```bash
+php artisan storage:link
+```
 
 ### 4. Database Configuration
 1. Download [XAMPP](https://sourceforge.net/projects/xampp/files/latest/download) and run it

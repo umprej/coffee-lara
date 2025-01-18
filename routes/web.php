@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Models\Coffee;
+
 Route::get('/', function () {
-    return view('welcome');
+    $coffees = Coffee::all();
+    return view('welcome', ['coffees' => $coffees]);
 });
