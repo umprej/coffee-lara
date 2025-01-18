@@ -24,7 +24,7 @@ php artisan key:generate
 ```
 
 ### 4. Database Configuration
-1. Start XAMPP
+1. Download [XAMPP](https://sourceforge.net/projects/xampp/files/latest/download) and run it
 2. Launch Apache and MySQL from XAMPP Control Panel
 3. Open `.env` and update database settings:
 ```
