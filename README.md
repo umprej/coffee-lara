@@ -42,7 +42,12 @@ DB_PASSWORD=
 php artisan migrate
 ```
 
-### 6. Start Development Server
+### 6. Seed the database
+```bash
+php artisan db:seed
+```
+
+### 7. Start Development Server
 ```bash
 php artisan serve
 ```
