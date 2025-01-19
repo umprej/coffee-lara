@@ -4,8 +4,8 @@
 
 ### 1. Clone the Repository
 ```bash
-git clone [repository-url]
-cd [project-name]
+git clone git@github.com:umprej/coffee-lara.git
+cd coffee-lara
 ```
 
 ### 2. Install Dependencies
