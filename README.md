@@ -55,3 +55,25 @@ php artisan db:seed
 ```bash
 php artisan serve
 ```
+
+
+## Troubleshooting
+### 1. Failed to listen after php artisan serve
+
+```bash
+php artisan serve
+  Failed to listen on 127.0.0.1:8000 (reason: ?)
+```
+
+If you see the above after, try running the following commands:
+
+```bash
+php --ini
+```
+
+Open the `php.ini` file at the path specified by the previous command and edit the following line the `variables_order`
+```bash
+variables_order = "GPCS"
+```
+
+
