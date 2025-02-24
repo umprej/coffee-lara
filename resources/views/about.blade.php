@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Coffee Types</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
     <!-- Include Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -29,25 +29,12 @@
         </nav>
     </div>
 </header>
-<body class="bg-gray-100">
-    <div class="container mx-auto px-4 py-8">
-        <h1 class="text-4xl font-bold text-center mb-8">Our Coffee Selection</h1>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            @foreach($coffees as $coffee)
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    @if($coffee->image_path)
-                        <img src="{{ asset('storage/' . $coffee->image_path) }}" 
-                             alt="{{ $coffee->title }}"
-                             class="w-full h-48 object-cover">
-                    @endif
-                    <div class="p-4">
-                        <h2 class="text-xl font-bold mb-2">{{ $coffee->title }}</h2>
-                        <p class="text-gray-600">{{ $coffee->description }}</p>
-                    </div>
-                </div>
-            @endforeach
+<body>
+    <body class="bg-gray-100">
+        <div class="container mx-auto px-4 py-8">
+            <h1 class="text-4xl font-bold text-center mb-8">About Us</h1>
+            <p class="text-center text-lg">Welcome to our coffee shop! We are passionate about providing the best coffee experience.</p>
         </div>
-    </div>
+    </body>
 </body>
 </html>
