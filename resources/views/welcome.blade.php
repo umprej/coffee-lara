@@ -11,8 +11,20 @@
     <div class="container mx-auto flex justify-between items-center px-4">
         <h1 class="text-2xl font-bold">Coffee Types</h1>
         <nav>
-            <a href="{{ route('login') }}" class="px-4 py-2 hover:bg-gray-700 rounded transition">Login</a>
-            <a href="{{ route('register') }}" class="px-4 py-2 hover:bg-gray-700 rounded transition">Register</a>
+            @auth
+                <a href="{{ route('dashboard') }}" class="px-4 py-2 hover:text-gray-700">Welcome, {{ Auth::user()->name }}!</a>
+                <a href="{{ route('logout') }}" 
+                   class="px-4 py-2 hover:bg-gray-700 rounded transition"
+                   onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                   Logout
+                </a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form>
+            @else
+                <a href="{{ route('login') }}" class="px-4 py-2 hover:bg-gray-700 rounded transition">Login</a>
+                <a href="{{ route('register') }}" class="px-4 py-2 hover:bg-gray-700 rounded transition">Register</a>
+            @endauth
         </nav>
     </div>
 </header>
