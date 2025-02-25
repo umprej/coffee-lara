@@ -56,6 +56,26 @@ class CoffeeSeeder extends Seeder
                 'description' => 'A cortado is an espresso with an equal amount of warm milk, balancing the strong flavor of the coffee with the creaminess of the milk.',
                 'image_path' => 'coffee_images/cortado.jpg',
             ],
+			[
+				'title' => 'Irish Coffee',
+				'description' => 'Irish Coffee is a classic cocktail made with hot coffee, Irish whiskey, sugar, and topped with a layer of fresh cream. The smooth warmth of the coffee pairs perfectly with the rich flavor of whiskey.',
+				'image_path' => 'coffee_images/irish_coffee.jpg',
+			],
+			[
+				'title' => 'Espresso Martini',
+				'description' => 'An Espresso Martini is a cocktail made with vodka, coffee liqueur, and a shot of espresso. It is shaken with ice to create a smooth, frothy drink with a rich coffee flavor and a hint of alcohol.',
+				'image_path' => 'coffee_images/espresso_martini.jpg',
+			],
+			[
+				'title' => 'Baileys Coffee',
+				'description' => 'Baileys Coffee is a cozy drink made with hot coffee and Baileys Irish Cream, creating a deliciously creamy, slightly sweet cocktail. Often served with whipped cream on top.',
+				'image_path' => 'coffee_images/baileys_coffee.jpg',
+			],
+			[
+				'title' => 'Coffee Negroni',
+				'description' => 'The Coffee Negroni is a twist on the classic Negroni cocktail, combining gin, Campari, sweet vermouth, and a shot of espresso for an intense, bitter coffee flavor that pairs well with the herbal notes of the gin.',
+				'image_path' => 'coffee_images/coffee_negroni.jpg',
+			]
         ];
 
         foreach ($coffees as $coffee) {
