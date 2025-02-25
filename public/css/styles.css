@@ -37,6 +37,40 @@ section {
     gap: 20px;
     justify-items: center;
     align-items: center;
+    position: relative;
+}
+
+.menu-onas {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.452);
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 80%;
+    margin: auto;
+    display: grid;
+    position: relative;
+}
+.text-onas {
+    text-align: right;
+    text-align: justify;
+}
+
+.onas {
+    width: 300px;
+    height: 300px;
+    border-radius: 20%; /* Kulaté obrázky */
+}
+.letec {
+    left: auto;
+    max-width: 650px;
+    text-align: left;
+
+}
+
+.letec2 {
+    max-width: 500;
+    float: right;
+    overflow: hidden;
 }
 
 /* Obrázky produktů */
