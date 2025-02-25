@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: rgb(0, 0, 0);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.logo {
+    size: 20px;
+}
+section
+{
+    max-width: 1000vh;
+}
+.nadpis {
+    text-align: center;
+    color: rgb(202, 192, 177);
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.menu-grid .produkt:hover {
+    max-width: 20%;
+    transition: max-width 0.5s linear;
+}
+.produkt {
+    padding: 0 10 10 ;
+    max-width: 200px;
+    margin-left: 5px;
+    border-radius: 20%;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+.menu-grid .produkt2:hover
+{
+    padding: 0 10 10 ;
+    max-width: 170px;
+    margin-left: 5px;
+    border-radius: 20%;
+    bottom: 10px;
+    transition: max-width 0.5s linear;
+}
+.produkt2
+{
+    padding: 0 10 10 ;
+    max-width: 150px;
+    margin-left: 5px;
+    border-radius: 20%;
+}
+#pozadi {
+    background: blur(8px);
+    background-image: url("kavarna.jpg");
+    background-image: blur(8px);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;  
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.hlavni {
+    top: 120px;
+    height: 115vh;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menu-grid
+{
+    top: 120px;
+    padding: 95px;
+    border: 2px;
+    border-radius: 10%;
+    background-color: rgba(0, 0, 0, 0.452);
+    max-width: 60%;
+    text-align: center;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.menu-grid2
+{
+
+    top: 120px;
+    padding: 95px;
+    border: 2px;
+    border-radius: 10%;
+    background-color: rgba(0, 0, 0, 0.452);
+    max-width: 60%;
+    text-align: right;
+    margin: auto;
+    max-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.informace {
+float: right;
+}   
+.textik
+{
+    width: 500px;
+    color: bisque;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: right;
+    margin-right: auto;
+    text-align: justify;
+}
+.obrazeek{
+    max-width: 650px;
+    text-align: left;
+    margin-left: auto;
+    border-radius: 10%;  
+}
+.informaceobrazek {
+    text-align: left;
+    margin-left: auto;
+    border-radius: 10%;
+    position: absolute;
+    float: left;
+}
+
+#menukafe1 {
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+.produkt:hover {
+    transform: scale(1.05);
+}
