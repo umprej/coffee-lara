@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 use App\Models\Coffee;
+use App\Http\Controllers\CoffeeController;
 
 Route::get('/', function () {
     $coffees = Coffee::all();
@@ -17,6 +18,8 @@ Route::get('/dashboard', function () {
 Route::get('/about', function () {
     return view('about');
 })->name('about');
+
+Route::get('/coffee/{id}', [CoffeeController::class, 'show'])->name('coffee.show');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
