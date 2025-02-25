@@ -9,7 +9,7 @@ use App\Http\Controllers\CoffeeController;
 Route::get('/', function () {
     $coffees = Coffee::all();
     return view('welcome', ['coffees' => $coffees]);
-});
+})->name('root');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

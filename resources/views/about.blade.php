@@ -9,7 +9,7 @@
 </head>
 <header class="bg-gray-800 text-white py-4">
     <div class="container mx-auto flex justify-between items-center px-4">
-        <h1 class="text-2xl font-bold">Coffee Types</h1>
+        <a href="{{ route('root') }}" class="text-2xl font-bold">Coffee Types</a>
         <nav>
             <a href="{{ route('about') }}" class="px-4 py-2 hover:bg-gray-700 rounded transition">About Us</a>
             @auth
