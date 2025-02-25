@@ -53,6 +53,7 @@ php artisan db:seed
 
 ### 7. Start Development Server
 ```bash
+npm install
 npm run dev
 php artisan serve
 ```
