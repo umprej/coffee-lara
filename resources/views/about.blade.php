@@ -3,7 +3,7 @@
 @section('title', 'About Us')
 
 @section('content')
-<section id="pozadi">
+<section  id="pozadi">
     <div  class="container mx-auto px-4 py-8">
         <h1 class="nadpis" class="text-4xl font-bold text-center mb-8">About Us</h1>
         <div class="menu-onas">
