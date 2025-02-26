@@ -84,6 +84,16 @@ background-color: #F5DEB3;
     display: grid;
     position: relative;
 }
+
+.menu-create {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.452);
+    max-width: 80%;
+    margin: auto;
+    display: grid;
+    position: relative;
+}
 /* Text Vpravo u show a about */
 .text-prava {
     text-align: right;
@@ -122,7 +132,7 @@ background-color: #F5DEB3;
     transition: transform 0.3s ease-in-out;
 }
 
-.produkt:hover, .produkt2:hover, .pridavani:hover {
+.produkt:hover, .produkt2:hover, .pridavani:hover, .submit:hover {
     transform: scale(1.1);
 }
 
@@ -134,13 +144,44 @@ background-color: #F5DEB3;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     min-height: 100vh;
 }
-
+/* Tlacitko pridat */
 .pridavani {
     width: 150px;
     padding: 20px;
     background-color:#967969;
     border-radius: 20%;
 }
+
+.create-center {
+    max-width: 50%;
+    text-align: center;
+    margin: auto;
+    justify-content: center;
+}
+
+/* Napis v Create */
+.napis {
+    text-align: center;
+    color: rgb(202, 192, 177);
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Create Kafe */
+.submit {
+    margin: auto;
+    background-color:#F5DEB3;
+    border: none;
+    color:#52423a;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
 
 /* Hlavní kontejner */
 .hlavni {
