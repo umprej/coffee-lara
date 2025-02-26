@@ -19,6 +19,10 @@ Route::get('/about', function () {
     return view('about');
 })->name('about');
 
+Route::get('/coffee/create', function () {
+    return view('coffee.create');
+})->name('coffee.create');
+
 Route::get('/coffee/{id}', [CoffeeController::class, 'show'])->name('coffee.show');
 
 Route::middleware('auth')->group(function () {

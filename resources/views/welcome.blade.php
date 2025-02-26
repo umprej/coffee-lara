@@ -21,9 +21,9 @@
                         @endif
                     @endforeach
 
-                <a href="#" class="text-yellow-500" id="favorite-star">
-                <img class="pridavani" src="storage/coffee_images/pridat.png" alt="">
-                </a>
+                    <a href="coffee/create" class="text-yellow-500" id="favorite-star">
+                        <img class="pridavani" src="storage/coffee_images/pridat.png" alt="">
+                    </a>
                 </div>
             </div>
         </div>
