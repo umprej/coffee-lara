@@ -17,7 +17,7 @@
             <nav>
                 <a href="{{ route('about') }}" class="px-4 py-2 hover:bg-gray-700 rounded transition">About Us</a>
                 @auth
-                    <a href="{{ route('dashboard') }}" class="px-4 py-2 hover:text-gray-700">Welcome, {{ Auth::user()->name }}!</a>
+                    <a href="{{ route('dashboard') }}"  class="px-4 py-2 hover:text-gray-700">Welcome, {{ Auth::user()->name }}!</a>
                     <a href="{{ route('logout') }}" 
                        class="px-4 py-2 hover:bg-gray-700 rounded transition"
                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">

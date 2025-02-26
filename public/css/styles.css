@@ -53,6 +53,13 @@ section {
     }
 }
 
+/*Header Hover effect */
+#custom-header a:hover {
+color: #52423a;
+background-color: #F5DEB3;
+
+}
+
 /* Menu-grid upraven pro show */
 .menu-okave {
     padding: 50px;
