@@ -33,12 +33,26 @@ section {
     max-width: 80%;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    grid-template-columns: 1fr;
+    gap: 1rem;
     justify-items: center;
     align-items: center;
     position: relative;
 }
+
+/* Media queries meni pocet sloupcu na zaklade sirky viewportu */
+@media (min-width: 640px) {
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .menu-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 /* Menu-grid upraven pro show */
 .menu-okave {
     padding: 50px;

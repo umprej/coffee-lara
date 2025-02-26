@@ -8,7 +8,7 @@
             <div class="hlavni">
                 <h1 class="nadpis">Coffee drinks</h1>
 
-                <div class="menu-grid grid grid-cols-3 gap-4">
+                <div class="menu-grid">
                     @foreach($coffees as $coffee)
                         @if($coffee->image_path)
                             <div class="text-center">
