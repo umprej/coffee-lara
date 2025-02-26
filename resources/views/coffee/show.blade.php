@@ -3,24 +3,28 @@
 @section('title', $coffee->title)
 
 @section('content')
-<div class="relative">
-        <div class="absolute top-0 right-0 m-4">
+<div id="pozadi">
+<br><br>
+<div class="menu-okave"><div class="absolute top-0 right-0 m-4">
             <a href="#" class="text-yellow-500" id="favorite-star">
                 <i class="far fa-star text-2xl"></i>
             </a>
         </div>
-    </div>
+      
+    
     <div class="grid grid-cols-2 gap-5">
-        <div class="container mx-auto px-4 py-8">
-            <img src="{{ asset('storage/' . $coffee->image_path) }}" 
+        <div class="letec" >
+            <img class="obrazek-leva" src="{{ asset('storage/' . $coffee->image_path) }}" 
                         alt="{{ $coffee->title }}"
-                        class="w-full h-48 object-cover mb-4 rounded-xl overflow-hidden">
+                        class="mb-4 rounded-xl overflow-hidden">
         </div>
-        <div class="container mx-auto px-4 py-8">
+        <div class="letec2" >
             <h1 class="text-4xl font-bold text-center mb-8">{{ $coffee->title }}</h1>
-            <p class="text-lg">{{ $coffee->description }}</p>
+            <p class="text-prava" class="text-lg">{{ $coffee->description }}</p>
         </div>
     </div>
+</div>
+</div>
 <script>
         document.addEventListener('DOMContentLoaded', function() {
             const star = document.getElementById('favorite-star');

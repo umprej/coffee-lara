@@ -37,6 +37,59 @@ section {
     gap: 20px;
     justify-items: center;
     align-items: center;
+    position: relative;
+}
+/* Menu-grid upraven pro show */
+.menu-okave {
+    padding: 50px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.452);
+    max-width: 80%;
+    margin: auto;
+    display: flex;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    position: relative;
+}
+
+/* Menu-grid upraven pro about */
+.menu-onas {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.452);
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 80%;
+    margin: auto;
+    display: grid;
+    position: relative;
+}
+/* Text Vpravo u show a about */
+.text-prava {
+    text-align: right;
+    text-align: justify;
+}
+/* Obrázek vlevo u show a about */
+.obrazek-leva {
+    transform: scale(1.1);
+    object-fit: cover;
+    border-radius: 20%; /* Kulaté obrázky */
+    width: 300px;
+    height: 300px;
+    border-radius: 20%; /* Kulaté obrázky */
+}
+
+/* Sekce Levá Strana */
+.letec {
+    left: auto;
+    max-width: 650px;
+    text-align: left;
+
+}
+/* Sekce Pravá Strana*/
+.letec2 {
+    max-width: 500;
+    float: left;
+    overflow: hidden;
 }
 
 /* Obrázky produktů */
