@@ -9,6 +9,7 @@
                 <h1 class="nadpis">Coffee drinks</h1>
 
                 <div class="menu-grid">
+
                     @foreach($coffees as $coffee)
                         @if($coffee->image_path)
                             <div class="text-center">
@@ -19,6 +20,10 @@
                             </div>
                         @endif
                     @endforeach
+
+                <a href="#" class="text-yellow-500" id="favorite-star">
+                <img class="pridavani" src="storage/coffee_images/pridat.png" alt="">
+                </a>
                 </div>
             </div>
         </div>
