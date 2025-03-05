@@ -60,7 +60,7 @@ php artisan serve
 
 
 ## Troubleshooting
-### Failed to listen after php artisan serve
+### 1. Failed to listen after php artisan serve
 
 ```bash
 php artisan serve
@@ -78,7 +78,7 @@ Open the `php.ini` file at the path specified by the previous command and edit t
 variables_order = "GPCS"
 ```
 
-### MySQL Database not starting in XAMPP in MacOS
+### 2. MySQL Database not starting in XAMPP on MacOS
 ```bash
  sudo /Applications/XAMPP/xamppfiles/bin/mysql.server start
 ```
