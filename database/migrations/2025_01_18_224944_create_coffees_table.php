@@ -16,7 +16,10 @@ return new class extends Migration
             $table->string('title');
             $table->text('description');
             $table->string('image_path');
+            $table->unsignedBigInteger('created_by')->default(1); // Default to admin user
             $table->timestamps();
+
+            $table->foreign('created_by')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
