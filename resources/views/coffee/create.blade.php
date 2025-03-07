@@ -8,7 +8,7 @@
     <div class="hlavni">
 
     <div class="menu-create">
-        <form action="" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('coffee.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="create-center">
                 <label for="title" class="napis">Title</label> <br>

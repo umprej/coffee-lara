@@ -23,6 +23,8 @@ Route::get('/coffee/create', function () {
     return view('coffee.create');
 })->name('coffee.create');
 
+Route::post('/coffee/store', [CoffeeController::class, 'store'])->name('coffee.store');
+
 Route::get('/coffee/{id}', [CoffeeController::class, 'show'])->name('coffee.show');
 
 Route::middleware('auth')->group(function () {
