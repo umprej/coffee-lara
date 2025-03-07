@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->text('description');
-            $table->string('image_path');
+            $table->string('image_path')->default('coffee_images/nokafe.jpg');
             $table->unsignedBigInteger('created_by')->default(1); // Default to admin user
             $table->timestamps();
 
