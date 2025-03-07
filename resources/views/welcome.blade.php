@@ -7,9 +7,14 @@
         <div id="pozadi">
             <div class="hlavni">
                 <h1 class="nadpis">Coffee drinks</h1>
-
+                {{-- Display success message after creating a new coffee type --}}
+                @if(session('success'))
+                    <script>
+                        alert("{{ session('success') }}");
+                    </script>
+                @endif
+                {{-- Display coffee grid --}}
                 <div class="menu-grid">
-
                     @foreach($coffees as $coffee)
                         @if($coffee->image_path)
                             <div class="text-center">
