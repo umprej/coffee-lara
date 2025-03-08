@@ -45,4 +45,12 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function favorites() {
+        return $this->belongsToMany(Coffee::class, 'favorites');
+    }
+
+    public function favoritedBy() {
+        return $this->belongsToMany(User::class, 'favorites');
+    }
 }

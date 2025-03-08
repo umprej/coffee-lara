@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 
 use App\Models\Coffee;
 use App\Http\Controllers\CoffeeController;
+use App\Http\Controllers\FavoriteController;
+
 
 Route::get('/', function () {
     $coffees = Coffee::all();
@@ -26,6 +28,8 @@ Route::get('/coffee/create', function () {
 Route::post('/coffee/store', [CoffeeController::class, 'store'])->name('coffee.store');
 
 Route::get('/coffee/{id}', [CoffeeController::class, 'show'])->name('coffee.show');
+
+Route::post('/coffee/{id}/favorite', [FavoriteController::class, 'toggleFavorite'])->name('coffee.favorite')->middleware('auth');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

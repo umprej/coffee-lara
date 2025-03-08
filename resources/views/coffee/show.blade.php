@@ -6,10 +6,13 @@
 <div id="pozadi">
 <br><br>
 <div class="menu-okave"><div class="absolute top-0 right-0 m-4">
-            <a href="#" class="text-yellow-500" id="favorite-star">
-                <i class="far fa-star text-2xl"></i>
-            </a>
-        </div>
+    <form action="{{ route('coffee.favorite', $coffee->id) }}" method="POST">
+        @csrf
+        <button type="submit" class="text-yellow-500" id="favorite-star">
+            <i class="{{ Auth::user()->favorites->contains($coffee->id) ? 'fas' : 'far' }} fa-star text-2xl"></i>
+        </button>
+    </form>
+</div>
       
     
     <div class="grid grid-cols-2 gap-5">
@@ -25,15 +28,4 @@
     </div>
 </div>
 </div>
-<script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const star = document.getElementById('favorite-star');
-            star.addEventListener('click', function(event) {
-                event.preventDefault();
-                const icon = star.querySelector('i');
-                icon.classList.toggle('far'); // Toggle the 'far' class (Font Awesome Regular) to show an empty star
-        		icon.classList.toggle('fas'); // Toggle the 'fas' class (Font Awesome Solid) to show a filled star
-            });
-        });
-    </script>
 @endsection
