@@ -13,8 +13,6 @@
         </button>
     </form>
 </div>
-      
-    
     <div class="grid grid-cols-2 gap-5">
         <div class="letec" >
             <img class="obrazek-leva" src="{{ asset('storage/' . $coffee->image_path) }}" 

@@ -21,6 +21,10 @@ Route::get('/about', function () {
     return view('about');
 })->name('about');
 
+Route::get('/favorites', function () {
+    return view('favorites');
+})->name('favorites');
+
 Route::get('/coffee/create', function () {
     return view('coffee.create');
 })->name('coffee.create');
