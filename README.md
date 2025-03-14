@@ -39,7 +39,7 @@ DB_DATABASE=coffee-db
 DB_USERNAME=root
 DB_PASSWORD=
 ```
-4. Create a new database in phpMyAdmin called *coffee-db*
+4. Open phpMyAdmin and create a new database named *coffee-db*.
 
 ### 5. Run Migrations
 ```bash
@@ -60,14 +60,16 @@ php artisan serve
 
 
 ## Troubleshooting
-### 1. Failed to listen after php artisan serve
+### 1. Failed to listen after 127.0.0.1:8000
+
+If you see an error like this after running `php artisan serve`:
 
 ```bash
 php artisan serve
   Failed to listen on 127.0.0.1:8000 (reason: ?)
 ```
 
-If you see the above after, try running the following commands:
+Try running the following commands:
 
 ```bash
 php --ini
@@ -83,4 +85,9 @@ variables_order = "GPCS"
  sudo /Applications/XAMPP/xamppfiles/bin/mysql.server start
 ```
 
+### 3. Old or duplicate data in the database
+Refreshes the database and run all database seeds:
+```bash
+php artisan migrate:refresh --seed
+```
 
