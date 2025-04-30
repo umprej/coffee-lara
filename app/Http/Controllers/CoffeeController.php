@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Coffee;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class CoffeeController extends Controller
 {
@@ -20,12 +21,10 @@ class CoffeeController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'required',
+            'title' => 'required|string|max:255',
             'description' => 'required',
             'image_path' => 'nullable|image|mimes:jpeg,png,jpg',
         ]);
-
-        $coffee = new Coffee($request->all());
 
         if ($request->hasFile('image_path')) {
             $imagePath = $request->file('image_path')->store('coffee_images', 'public');
@@ -37,6 +36,8 @@ class CoffeeController extends Controller
             'title' => $request->title,
             'description' => $request->description,
             'image_path' => $imagePath,
+            //TODO: Needs to be fixed, as it's not getting the user ID, every added coffee is assigned an id of '1'
+            'created_by' => Auth::id() ?? 1, // Use user ID or '1' for admin if not created by a user
         ]);
 
         return redirect()->route('root')->with('success', 'Coffee added successfully.');
