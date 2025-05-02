@@ -16,10 +16,11 @@ return new class extends Migration
             $table->string('title');
             $table->text('description');
             $table->string('image_path')->default('coffee_images/nokafe.jpg');
-            $table->unsignedBigInteger('created_by')->default(1); // Default to admin user
+            $table->index('created_by')->default(null); // Default to admin user
             $table->timestamps();
-
-            $table->foreign('created_by')->references('id')->on('users')->onDelete('cascade');
+            
+            // Foreign key constraint
+            $table->foreignId('created_by')->constrained('users')->onDelete('cascade');
         });
     }
 

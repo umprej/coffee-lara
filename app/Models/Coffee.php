@@ -9,11 +9,11 @@ class Coffee extends Model
     protected $fillable = [
         'title',
         'description',
-        'image_path'.
+        'image_path',
         'created_by',
     ];
 
-    public function user()
+    public function createdBy()
     {
         return $this->belongsTo(User::class, 'created_by');
     }

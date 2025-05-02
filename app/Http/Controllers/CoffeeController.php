@@ -26,6 +26,8 @@ class CoffeeController extends Controller
             'image_path' => 'nullable|image|mimes:jpeg,png,jpg',
         ]);
 
+        // $coffee = new Coffee($request->all());
+
         if ($request->hasFile('image_path')) {
             $imagePath = $request->file('image_path')->store('coffee_images', 'public');
         } else {
@@ -36,8 +38,7 @@ class CoffeeController extends Controller
             'title' => $request->title,
             'description' => $request->description,
             'image_path' => $imagePath,
-            //TODO: Needs to be fixed, as it's not getting the user ID, every added coffee is assigned an id of '1'
-            'created_by' => Auth::id() ?? 1, // Use user ID or '1' for admin if not created by a user
+            'created_by' => $request->user()->id
         ]);
 
         return redirect()->route('root')->with('success', 'Coffee added successfully.');
