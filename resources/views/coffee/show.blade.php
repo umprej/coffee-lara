@@ -26,7 +26,9 @@
             <div class="letec2" >
                 <h1 class="text-4xl font-bold text-center mb-8">{{ $coffee->title }}</h1>
                 <p class="text-prava" class="text-lg">{{ $coffee->description }}</p>
-                <p class="text-prava" class="text-lg">Created by: {{ $coffee->created_by}}</p>
+                <p class="text-prava text-lg">
+                    Created by: {{ $coffee->createdBy->name ?? 'Unknown' }}
+                </p>
             </div>
         </div>
     </div>
