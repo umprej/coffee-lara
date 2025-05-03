@@ -15,6 +15,17 @@
                         <i class="{{ Auth::user()->favorites->contains($coffee->id) ? 'fas' : 'far' }} fa-star text-2xl"></i>
                     </button>
                 </form>
+
+                {{-- Only show the delete button to admin users --}}
+                @if(Auth::user()->is_admin)
+                    <form action="{{ route('coffee.destroy', $coffee->id) }}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="text-red-500" id="delete-coffee">
+                            <i class="fas fa-trash-alt text-2xl"></i>
+                        </button>
+                    </form>
+                @endif
             @endauth
         </div>
         <div class="grid grid-cols-2 gap-5">

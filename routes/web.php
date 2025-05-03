@@ -41,4 +41,6 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::delete('/coffee/{id}', [CoffeeController::class, 'destroy'])->name('coffee.destroy')->middleware('auth');
+
 require __DIR__.'/auth.php';

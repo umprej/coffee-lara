@@ -43,4 +43,13 @@ class CoffeeController extends Controller
 
         return redirect()->route('root')->with('success', 'Coffee added successfully.');
     }
+
+    public function destroy($id)
+    {
+        $coffee = Coffee::findOrFail($id);
+
+        $coffee->delete();
+
+        return redirect()->route('root')->with('success', 'Coffee deleted successfully.');
+    }
 }
