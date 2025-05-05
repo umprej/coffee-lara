@@ -136,13 +136,13 @@ background-color: #F5DEB3;
     transform: scale(1.1);
 }
 
-/* Pozadí */
 #pozadi {
-    background: #967969;
     padding: 20px;
-    /* border-radius: 8px; */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     min-height: 100vh;
+    background-image: url('/storage/coffee_images/kavarna.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 /* Tlacitko pridat */
