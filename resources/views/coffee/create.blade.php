@@ -12,15 +12,15 @@
             @csrf
             <div class="create-center">
                 <label for="title" class="napis">Title</label> <br>
-                <input type="text" name="title" id="title" class="w-full border-gray-300 rounded" required>
+                <input type="text" name="title" id="title" class="w-full border-gray-300 rounded text-input" required>
             </div>
             <div class="create-center">
                 <label for="description" class="napis">Description</label> <br>
-                <textarea name="description" id="description" class="w-full border-gray-300 rounded" required></textarea>
+                <textarea name="description" id="description" class="w-full border-gray-300 rounded text-input" required></textarea>
             </div>
             <div class="create-center">
                 <label for="image_path" class="napis">Image</label> <br>
-                <input type="file" name="image_path" id="image_path" class="w-full border-gray-300 rounded">
+                <input type="file" name="image_path" id="image_path" class="w-full border-gray-300 rounded ">
             </div> <br>
             <div class="create-center">
             <button type="submit" class="submit">Add Coffee</button></div>
