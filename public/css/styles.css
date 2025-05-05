@@ -139,7 +139,9 @@ background-color: #F5DEB3;
 #pozadi {
     padding: 20px;
     min-height: 100vh;
-    background-image: url('/storage/coffee_images/kavarna.jpg');
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0) 50%,rgb(200, 200, 200) 90%),
+        url('/storage/coffee_images/kavarna.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
