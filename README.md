@@ -49,6 +49,7 @@ php artisan migrate
 ### 6. Seed the database
 ```bash
 php artisan db:seed
+php artisan migrate:refresh --seed
 ```
 
 ### 7. Start Development Server
